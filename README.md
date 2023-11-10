@@ -49,6 +49,8 @@ plugins=(
 sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
+### در قدم آخر یک بار از سیستم log out کنید و دوباره لاگین کنین یا یک بار سیستم رو reboot کنید
+
 ### بعد از اجرا کردن و نصب اون کافیه برین توی فایل zshrc. و بخش پلاگین ها و zsh-syntax-highlighting  رو اضافه کنید
 
 plugins=(
