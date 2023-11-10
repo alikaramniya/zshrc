@@ -3,7 +3,7 @@
 ### اول از همه باید zsh رو نصب کنیم 
 
 ### Debian base
-‍‍‍
+
 ```
 sudo apt install zsh
 ```
