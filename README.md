@@ -20,6 +20,10 @@ sudo pacman -S zsh
 chsh -s $(which zsh)
 ```
 
+### بعد دستور پایین
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 ### حالا توی مسیر ~ cd ما یک فایل داریم به اسم zshrc. که میتونیم کافنیگ های خودمون برای zsh رو انجا قرار بدیم
 
 
