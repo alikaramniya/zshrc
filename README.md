@@ -24,7 +24,7 @@ chsh -s $(which zsh)
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-### حالا توی مسیر ~ cd ما یک فایل داریم به اسم zshrc. که میتونیم کافنیگ های خودمون برای zsh رو انجا قرار بدیم
+### حالا توی مسیر ~ cd ما یک فایل داریم به اسم zshrc. که میتونیم کافنیگ های خودمون برای zsh رو انجا قرار بدیم بعدش یک بار سیستم رو reboot کن
 
 
 ## نصب کردن پلاگین برای zsh
