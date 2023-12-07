@@ -125,6 +125,7 @@ set -o vi
 export FZF_DEFAULT_COMMAND="find -L"
 
 # Global command
+alias cpc="xclip -selection c <"
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
 alias config="vim ~/.config/i3/config"
