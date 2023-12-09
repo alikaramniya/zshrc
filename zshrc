@@ -126,6 +126,8 @@ export FZF_DEFAULT_COMMAND="find -L"
 
 # Global command
 alias cpc="xclip -selection c <"
+### alias tmux="env TERM=screen-256color tmux"
+### alias vim="nvim"
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
 alias config="vim ~/.config/i3/config"
