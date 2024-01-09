@@ -1,7 +1,3 @@
-### neofetch
-### pfetch
-### cmatrix
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -19,7 +15,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+### ZSH_THEME="powerlevel10k/powerlevel10k"
+### ZSH_THEME="imajes"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -82,12 +80,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    git 
     web-search
-    sudo
-    git
+    sudo 
     zsh-autosuggestions
     zsh-syntax-highlighting
-
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -117,52 +114,50 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 set -o vi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# connect laravler installer
+export PATH=~/.config/composer/vendor/bin:$PATH
 
+# search hidden file
 export FZF_DEFAULT_COMMAND="find -L"
 
 # Global command
 alias cpc="xclip -selection c <"
-#Config zshrc for italic font in tmux and show color
+alias t="timedatectl"
 alias ssh="TERM=xterm-256color ssh"
-### alias vim="nvim"
 alias vimrc="vim ~/.vimrc"
+alias nvimrc="vim ~/.config/nvim/init.vim"
 alias zshrc="vim ~/.zshrc"
+alias html="cd /var/www/html"
 alias config="vim ~/.config/i3/config"
-alias http="cd /srv/http"
-alias gradleStart="cd /srv/http/gradle && live-server ."
-alias listGitCommand="vim ~/.oh-my-zsh/plugins/git/git.plugin.zsh"
-
-# Config laravel/installer
-export PATH=~/.config/composer/vendor/bin:$PATH
+alias kitty_config="vim ~/.config/kitty/kitty.conf"
 
 # laravel command
 alias art="php artisan"
-alias mcon="art make:controller"
 alias mcon="art make:controller"
 alias mmid="art make:middleware"
 alias mmod="art make:model"
 alias mcom="art make:component"
 alias mreq="art make:request"
-alias mfac="art make:factory"
-alias msee="art make:seeder"
+alias mview="art make:view"
 alias seed="art db:seed"
 alias mmig="art make:migration"
-alias migrate="art migrate"
-alias fresh="art migrate:fresh"
-alias refresh="art migrate:refresh"
-alias reset="art migrate:reset"
-alias rollback="art migrate:rollback"
-alias status="art migrate:status"
-alias rl="art route:list"
-alias srv="art serve"
 alias vp="art v:p"
+alias laravel_debugbar='composer require barryvdh/laravel-debugbar --dev'
 
 alias ncra="npx create-react-app"
 
-# change color auto suggestion
-### ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=value'
-### ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#586e75'
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=value'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#586e75'
+
+# bun completions
+[ -s "/home/ali/.bun/_bun" ] && source "/home/ali/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
